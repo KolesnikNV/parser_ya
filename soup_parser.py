@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
-from selenium.common.exceptions import NoSuchElementException, MoveTargetOutOfBoundsException
+from selenium.common.exceptions import (MoveTargetOutOfBoundsException,
+                                        NoSuchElementException)
 from selenium.webdriver import ActionChains
 
 
