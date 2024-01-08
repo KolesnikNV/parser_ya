@@ -4,7 +4,8 @@ import json
 import os
 import random
 from time import sleep
-
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from utils.constants import ACCEPT_BUTTON
@@ -27,31 +28,35 @@ def generate_random_ip():
 
 
 # options = webdriver.FirefoxOptions()
-# # options.add_argument("-headless")
+# options.add_argument("-headless")
 # options.binary_location = "/Applications/Firefox.app/Contents/MacOS/firefox"
 # profile = webdriver.FirefoxProfile()
 # profile.set_preference("general.useragent.override", f"{generate_random_user_agent()}")
 # driver = webdriver.Chrome(
-#     executable_path="/Users/nikitakolesnik/PycharmProjects/parser_ya/drivers/geckodriverr",
+#     executable_path="",
 #     options=options,
-#     firefox_profile=profile,
 # )
 
 # options = webdriver.ChromeOptions()
 # # options.add_argument("-headless")
 # options.add_argument(f"--user-agent='{generate_random_user_agent()}'")
-# # options.add_argument(f"--proxy-server=socks5://{generate_random_ip()}")
 # driver = webdriver.Chrome(
-#     executable_path="/Users/nikitakolesnik/PycharmProjects/parser_ya/drivers/chromedriver",
+#     executable_path="",
 #     options=options,
 # )
 
+# options = webdriver.ChromeOptions()
+# # options.add_argument("-headless")
+# options.add_argument(f"--user-agent='{generate_random_user_agent()}'")
+# driver = webdriver.Chrome(
+#     executable_path="",
+#     options=options,
+# )
+
+
 options = Options()
 options.add_argument("-headless")
-
-driver = webdriver.Chrome(
-    options=options,
-)
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 
 
 class LinksCollector:
@@ -162,4 +167,4 @@ async def get_links(city, query):
         )
 
 
-asyncio.run(get_links("Самара", "Салон мебели"))
+# asyncio.run(get_links("Самара", "Салон мебели"))

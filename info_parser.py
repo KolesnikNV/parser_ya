@@ -10,16 +10,11 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 from soup_parser import SoupContentParser
+from webdriver_manager.chrome import ChromeDriverManager
 
-#
-# chrome_options = Options()
-# chrome_options.add_argument("--headless")
-# chrome_options.add_argument("--disable-gpu")
-# chrome_options.add_argument("--no-sandbox")
-# driver = webdriver.Safari(
-#     # executable_path="/Users/nikitakolesnik/PycharmProjects/parser_maps/drivers/chromedriver",
-#     # options=chrome_options,
-# )
+options = Options()
+options.add_argument("-headless")
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 
 
 class Parser:
@@ -111,7 +106,7 @@ async def get_info(query):
     parser = argparse.ArgumentParser()
     parser.add_argument("query", help="organization type")
     type_org = query
-    driver = webdriver.Safari()
+    # driver = webdriver.Safari()
     all_hrefs = []
     files = os.listdir(f"links/{type_org}")
     for file in files:
