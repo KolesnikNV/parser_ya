@@ -4,50 +4,9 @@ FROM ubuntu:20.04
 # Update package list and install necessary packages
 RUN apt-get update && \
     apt-get install -y wget gnupg python3 python3-pip
-
-# Download Google Chrome
-RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
-# Install dependencies for Google Chrome
-RUN apt-get install -y \
-    fonts-liberation \
-    libasound2 \
-    libatk-bridge2.0-0 \
-    libatk1.0-0 \
-    libatspi2.0-0 \
-    libcairo2 \
-    libcups2 \
-    libcurl3-gnutls \
-    libdbus-1-3 \
-    libdrm2 \
-    libgbm1 \
-    libglib2.0-0 \
-    libgtk-3-0 \
-    libnspr4 \
-    libnss3 \
-    libpango-1.0-0 \
-    libu2f-udev \
-    libvulkan1 \
-    libx11-6 \
-    libxcb1 \
-    libxcomposite1 \
-    libxdamage1 \
-    libxext6 \
-    libxfixes3 \
-    libxkbcommon0 \
-    libxrandr2 \
-    xdg-utils
-
-# Install Google Chrome
-RUN dpkg -i google-chrome-stable_current_amd64.deb
-
-# Download ChromeDriver
-RUN wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
-
-# Unzip ChromeDriver
-RUN apt-get install -y unzip && \
-    unzip chromedriver_linux64.zip -d /usr/local/bin/
-
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+RUN apt-get update && apt-get install -y google-chrome-stable
 # Set the working directory
 WORKDIR /app
 
