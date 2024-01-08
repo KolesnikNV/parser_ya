@@ -14,7 +14,9 @@ async def read_csv(query):
 
 async def process_data(df):
     df = df.dropna(subset=["name"])
-    result_df = pd.DataFrame(columns=["name", "website", "phones", "social", "count", "rating", "ypage"])
+    result_df = pd.DataFrame(
+        columns=["name", "website", "phones", "social", "count", "rating", "ypage"]
+    )
 
     for index, row in df.iterrows():
         name = row["name"]
@@ -36,7 +38,7 @@ async def process_data(df):
                         "social": [social],
                         "count": [count],
                         "rating": [rating],
-                        "ypage": ypage
+                        "ypage": ypage,
                     }
                 ),
             ]
@@ -56,7 +58,7 @@ async def rename_columns(result_df):
         "social": "Соц. сети",
         "count": "Количество",
         "rating": "Райтинг",
-        "ypage": "Страница на картах"
+        "ypage": "Страница на картах",
     }
 
     result_df = result_df.rename(columns=column_mapping)
@@ -65,7 +67,9 @@ async def rename_columns(result_df):
 
 async def write_to_excel(city, query, result_df):
     with pd.ExcelWriter(f"{city}_{query}.xlsx", engine="openpyxl") as writer:
-        result_df.to_excel(writer, index=False, sheet_name="Страница1", engine="openpyxl")
+        result_df.to_excel(
+            writer, index=False, sheet_name="Страница1", engine="openpyxl"
+        )
         worksheet = writer.sheets["Страница1"]
         for column in worksheet.columns:
             max_length = 0
@@ -76,7 +80,7 @@ async def write_to_excel(city, query, result_df):
                         max_length = len(cell.value)
                 except:
                     pass
-            adjusted_width = (max_length + 2)
+            adjusted_width = max_length + 2
             worksheet.column_dimensions[column[0].column_letter].width = adjusted_width
             for cell in column:
                 cell.alignment = Alignment(wrap_text=True)
@@ -89,4 +93,4 @@ async def get_excel(city, query):
     await write_to_excel(city, query, result_df)
 
 
-asyncio.run(get_excel("Самара", "Магазин снегоходов"))
+# asyncio.run(get_excel("Самара", "Магазин снегоходов"))

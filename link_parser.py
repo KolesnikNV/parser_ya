@@ -1,4 +1,5 @@
 import argparse
+import asyncio
 import json
 import os
 import random
@@ -6,15 +7,49 @@ from time import sleep
 
 from selenium import webdriver
 from selenium.webdriver import ActionChains
+from utils.constants import ACCEPT_BUTTON
+from faker import Faker
 from selenium.webdriver.chrome.options import Options
 
-from utils.constants import ACCEPT_BUTTON, type_org_mapping
+fake = Faker()
+
+
+def generate_random_user_agent():
+    agent = fake.chrome()
+    print(agent)
+    return agent
+
+
+def generate_random_ip():
+    ip = fake.ipv4()
+    print(ip)
+    return ip
+
+
+# options = webdriver.FirefoxOptions()
+# # options.add_argument("-headless")
+# options.binary_location = "/Applications/Firefox.app/Contents/MacOS/firefox"
+# profile = webdriver.FirefoxProfile()
+# profile.set_preference("general.useragent.override", f"{generate_random_user_agent()}")
+# driver = webdriver.Chrome(
+#     executable_path="/Users/nikitakolesnik/PycharmProjects/parser_ya/drivers/geckodriverr",
+#     options=options,
+#     firefox_profile=profile,
+# )
+
+# options = webdriver.ChromeOptions()
+# # options.add_argument("-headless")
+# options.add_argument(f"--user-agent='{generate_random_user_agent()}'")
+# # options.add_argument(f"--proxy-server=socks5://{generate_random_ip()}")
+# driver = webdriver.Chrome(
+#     executable_path="/Users/nikitakolesnik/PycharmProjects/parser_ya/drivers/chromedriver",
+#     options=options,
+# )
 
 options = Options()
 options.add_argument("-headless")
 
 driver = webdriver.Chrome(
-    executable_path="/Users/nikitakolesnik/PycharmProjects/parser_ya/drivers/chromedriver",
     options=options,
 )
 
@@ -40,13 +75,13 @@ class LinksCollector:
 
     def _open_page(self, request):
         self.driver.get(self.link)
-        sleep(random.uniform(1, 2))
+        sleep(random.uniform(2, 3))
         self.driver.find_element_by_class_name(name="input__control").send_keys(request)
-        sleep(random.uniform(0.4, 0.7))
+        sleep(random.uniform(1, 2))
         self.driver.find_element_by_class_name(
             name="small-search-form-view__button"
         ).click()
-        sleep(random.uniform(1.4, 2))
+        sleep(random.uniform(5, 6))
         self.slider = self.driver.find_element_by_class_name(
             name="scroll__scrollbar-thumb"
         )
@@ -125,3 +160,6 @@ async def get_links(city, query):
             type_org_ru=query,
             type_org=query,
         )
+
+
+asyncio.run(get_links("Самара", "Салон мебели"))
