@@ -1,0 +1,104 @@
+1704711296288	geckodriver	INFO	Listening on 127.0.0.1:51822
+1704711297311	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/mm/qkfrdqv51cx1kc_wc0knqv2c0000gn/T/rust_mozprofilezrLa3A"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1704711297528	Marionette	INFO	Marionette enabled
+2024-01-08 14:54:57.630 plugin-container[3569:96778] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-01-08 14:54:57.630 plugin-container[3569:96778] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-01-08 14:54:57.636 plugin-container[3569:96778] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-01-08 14:54:57.636 plugin-container[3569:96778] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-01-08 14:54:57.636 plugin-container[3569:96780] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-01-08 14:54:57.636 plugin-container[3569:96780] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1704711297673	Marionette	INFO	Listening on port 51829
+Read port: 51829
+1704711297815	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+2024-01-08 10:54:58.759 plugin-container[3574:96971] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-01-08 10:54:58.759 plugin-container[3574:96971] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-01-08 10:54:58.761 plugin-container[3574:96971] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-01-08 10:54:58.761 plugin-container[3574:96971] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-01-08 10:54:58.761 plugin-container[3574:96970] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-01-08 10:54:58.761 plugin-container[3574:96970] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://yandex.ru."
+1704711327556	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://yandex.ru."
+JavaScript warning: https://yastatic.net/s3/front-maps-static/maps-front-maps/build/client/desktop/chunks/base/420a7d0eff3b5fa7c20e.yandex.ru.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Texture has not been initialized prior to a partial upload, forcing the browser to clear it. This may be slow.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Tex image TEXTURE_2D level 0 is incurring lazy initialization.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+JavaScript warning: , line 0: WebGL warning: texSubImage: Texture has not been initialized prior to a partial upload, forcing the browser to clear it. This may be slow.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Tex image TEXTURE_2D level 0 is incurring lazy initialization.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1704711398361	geckodriver	INFO	Listening on 127.0.0.1:51912
+1704711398366	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/mm/qkfrdqv51cx1kc_wc0knqv2c0000gn/T/rust_mozprofile2cMeMo"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1704711398538	Marionette	INFO	Marionette enabled
+2024-01-08 14:56:38.653 plugin-container[3608:98579] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-01-08 14:56:38.653 plugin-container[3608:98579] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-01-08 14:56:38.655 plugin-container[3608:98579] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-01-08 14:56:38.655 plugin-container[3608:98579] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-01-08 14:56:38.655 plugin-container[3608:98584] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-01-08 14:56:38.655 plugin-container[3608:98584] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1704711398688	Marionette	INFO	Listening on port 51917
+Read port: 51917
+1704711398850	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+2024-01-08 10:56:39.398 plugin-container[3611:98730] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-01-08 10:56:39.398 plugin-container[3611:98730] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-01-08 10:56:39.399 plugin-container[3611:98730] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-01-08 10:56:39.399 plugin-container[3611:98730] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2024-01-08 10:56:39.399 plugin-container[3611:98731] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2024-01-08 10:56:39.399 plugin-container[3611:98731] nil host used in call to allowsAnyHTTPSCertificateForHost:
+JavaScript warning: https://yastatic.net/s3/front-maps-static/maps-front-maps/build/client/desktop/chunks/base/420a7d0eff3b5fa7c20e.yandex.ru.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Texture has not been initialized prior to a partial upload, forcing the browser to clear it. This may be slow.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Tex image TEXTURE_2D level 0 is incurring lazy initialization.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Texture has not been initialized prior to a partial upload, forcing the browser to clear it. This may be slow.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Tex image TEXTURE_2D level 0 is incurring lazy initialization.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://yandex.ru."
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: , line 0: WebGL warning: texSubImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+1704711428554	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

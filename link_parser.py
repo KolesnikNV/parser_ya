@@ -10,14 +10,13 @@ from selenium.webdriver.chrome.options import Options
 
 from utils.constants import ACCEPT_BUTTON, type_org_mapping
 
-# chrome_options = Options()
-# chrome_options.add_argument("--headless")
-# chrome_options.add_argument("--disable-gpu")
-# chrome_options.add_argument("--no-sandbox")
-# driver = webdriver.Safari(
-#     #     executable_path="/Users/nikitakolesnik/PycharmProjects/parser_maps/drivers/chromedriver",
-#     #     options=chrome_options,
-# )
+options = Options()
+options.add_argument("-headless")
+
+driver = webdriver.Chrome(
+    executable_path="/Users/nikitakolesnik/PycharmProjects/parser_ya/drivers/chromedriver",
+    options=options,
+)
 
 
 class LinksCollector:
@@ -42,9 +41,7 @@ class LinksCollector:
     def _open_page(self, request):
         self.driver.get(self.link)
         sleep(random.uniform(1, 2))
-        self.driver.find_element_by_class_name(
-            name="search-form-view__input"
-        ).send_keys(request)
+        self.driver.find_element_by_class_name(name="input__control").send_keys(request)
         sleep(random.uniform(0.4, 0.7))
         self.driver.find_element_by_class_name(
             name="small-search-form-view__button"
@@ -120,7 +117,7 @@ async def get_links(city, query):
 
     for district in ["Россия"]:
         sleep(1)
-        driver = webdriver.Safari()
+        # driver = webdriver.Safari()
         grabber = LinksCollector(driver)
         grabber.run(
             city=city,

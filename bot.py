@@ -34,25 +34,26 @@ async def command_start(message: Message, state: FSMContext) -> None:
 
 
 @form_router.message(Form.city)
-async def process_name(message: Message, state: FSMContext) -> None:
+async def process_city(message: Message, state: FSMContext) -> None:
     await state.update_data(city=message.text)
     await state.set_state(Form.query)
     await message.answer("Введи поисковый запрос")
 
 
 @form_router.message(Form.query)
-async def process_language(message: Message, state: FSMContext) -> None:
+async def process_query(message: Message, state: FSMContext) -> None:
     data = await state.update_data(query=message.text)
     await state.clear()
     await show_summary(message=message, data=data)
+    await state.clear()
 
 
 async def show_summary(message: Message, data: Dict[str, Any]) -> None:
     city = data["city"]
     query = data["query"]
     await get_links(city, query)
-    await get_info(query)
-    await get_excel(city, query)
+    # await get_info(query)
+    # await get_excel(city, query)
     await message.answer_document(
         FSInputFile(f"{city}_{query}.xlsx"), caption="Запрос выполнен успешно"
     )
