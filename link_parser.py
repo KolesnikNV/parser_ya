@@ -60,7 +60,10 @@ chrome_options.add_argument("--disable-gpu")
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-dev-shm-usage")
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+driver = webdriver.Chrome(
+    executable_path="/root/parser_ya/drivers/chromedriver_linux",
+    options=chrome_options,
+)
 
 
 class LinksCollector:
