@@ -12,6 +12,7 @@ from utils.constants import ACCEPT_BUTTON
 from faker import Faker
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.common.exceptions import NoSuchElementException
 
 fake = Faker()
 
@@ -86,17 +87,24 @@ class LinksCollector:
         self.driver.maximize_window()
 
     def _open_page(self, request):
-        self.driver.get(self.link)
-        sleep(random.uniform(2, 3))
-        self.driver.find_element_by_class_name(name="input__control").send_keys(request)
-        sleep(random.uniform(1, 2))
-        self.driver.find_element_by_class_name(
-            name="small-search-form-view__button"
-        ).click()
-        sleep(random.uniform(5, 6))
-        self.slider = self.driver.find_element_by_class_name(
-            name="scroll__scrollbar-thumb"
-        )
+        try:
+            self.driver.get(self.link)
+            sleep(random.uniform(2, 3))
+            self.driver.find_element_by_class_name(name="input__control").send_keys(
+                request
+            )
+            sleep(random.uniform(1, 2))
+            self.driver.find_element_by_class_name(
+                name="small-search-form-view__button"
+            ).click()
+            sleep(random.uniform(5, 6))
+            self.slider = self.driver.find_element_by_class_name(
+                name="scroll__scrollbar-thumb"
+            )
+        except NoSuchElementException:
+            self.driver.quit()
+            self._init_driver()
+            self._open_page(request)
 
         if self.accept:
             flag = True
@@ -104,7 +112,7 @@ class LinksCollector:
             while flag:
                 try:
                     count += 1
-                    sleep(3)
+                    sleep(5)
                     self.driver.find_element_by_xpath(self.accept_button).click()
                     flag = False
                 except:
