@@ -101,10 +101,8 @@ class LinksCollector:
             self.slider = self.driver.find_element_by_class_name(
                 name="scroll__scrollbar-thumb"
             )
-        except NoSuchElementException:
-            self.driver.quit()
-            self._init_driver()
-            self._open_page(request)
+        except NoSuchElementException as e:
+            print(e)
 
         if self.accept:
             flag = True
