@@ -61,7 +61,7 @@ chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chromedriver_path = "/usr/local/bin/chromedriver"
-chrome_binary_path = "/usr/bin/chrome"
+chrome_binary_path = "/usr/bin/google"
 chrome_options.binary_location = chrome_binary_path
 driver = webdriver.Chrome(executable_path=chromedriver_path, options=chrome_options)
 
