@@ -60,8 +60,8 @@ chrome_options.add_argument("--disable-gpu")
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-dev-shm-usage")
-chromedriver_path = "/usr/local/bin/chromedriver"  # Замените на свой реальный путь
-chrome_binary_path = "/usr/local/bin/chrome"  # Замените на свой реальный путь
+chromedriver_path = "/usr/local/bin/chromedriver"
+chrome_binary_path = "/usr/bin/chrome"
 chrome_options.binary_location = chrome_binary_path
 driver = webdriver.Chrome(executable_path=chromedriver_path, options=chrome_options)
 
