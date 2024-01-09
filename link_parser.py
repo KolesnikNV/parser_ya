@@ -11,6 +11,7 @@ from selenium.webdriver import ActionChains
 from utils.constants import ACCEPT_BUTTON
 from faker import Faker
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service as ChromeService
 
 fake = Faker()
 
@@ -54,11 +55,12 @@ def generate_random_ip():
 # )
 
 
-options = Options()
-options.add_argument("--headless")
-options.add_argument("--disable-dev-shm-usage")
-
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+chrome_options = Options()
+chrome_options.add_argument("--disable-gpu")
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-dev-shm-usage")
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
 
 
 class LinksCollector:
