@@ -52,8 +52,8 @@ async def show_summary(message: Message, data: Dict[str, Any]) -> None:
     city = data["city"]
     query = data["query"]
     await get_links(city, query)
-    # await get_info(query)
-    # await get_excel(city, query)
+    await get_info(query)
+    await get_excel(city, query)
     await message.answer_document(
         FSInputFile(f"{city}_{query}.xlsx"), caption="Запрос выполнен успешно"
     )

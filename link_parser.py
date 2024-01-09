@@ -108,7 +108,7 @@ class LinksCollector:
                     self.driver.find_element_by_xpath(self.accept_button).click()
                     flag = False
                 except:
-                    if count > 5:
+                    if count > 50:
                         self.driver.quit()
                         self._init_driver()
                         self._open_page(request)
