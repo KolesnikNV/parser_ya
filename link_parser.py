@@ -11,9 +11,7 @@ from selenium.webdriver import ActionChains
 from utils.constants import ACCEPT_BUTTON
 from faker import Faker
 from selenium.webdriver.chrome.options import Options
-import chromedriver_autoinstaller
 
-chromedriver_autoinstaller.install()
 fake = Faker()
 
 
@@ -57,8 +55,10 @@ def generate_random_ip():
 
 
 options = Options()
-options.add_argument("-headless")
-driver = webdriver.Chrome(options=options)
+options.add_argument("--headless")
+options.add_argument("--disable-dev-shm-usage")
+
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 
 
 class LinksCollector:
