@@ -84,7 +84,7 @@ class LinksCollector:
         self.accept = accept
 
     def _init_driver(self):
-        self.driver.maximize_window()
+        pass
 
     def _open_page(self, request):
         try:
