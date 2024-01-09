@@ -58,7 +58,7 @@ def generate_random_ip():
 
 options = Options()
 options.add_argument("-headless")
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+driver = webdriver.Chrome(options=options)
 
 
 class LinksCollector:
