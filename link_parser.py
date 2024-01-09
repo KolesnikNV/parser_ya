@@ -87,23 +87,17 @@ class LinksCollector:
         pass
 
     def _open_page(self, request):
-        try:
-            self.driver.get(self.link)
-            sleep(random.uniform(2, 3))
-            self.driver.find_element_by_class_name(name="input__control").send_keys(
-                request
-            )
-            sleep(random.uniform(1, 2))
-            self.driver.find_element_by_class_name(
-                name="small-search-form-view__button"
-            ).click()
-            sleep(random.uniform(5, 6))
-            self.slider = self.driver.find_element_by_class_name(
-                name="scroll__scrollbar-thumb"
-            )
-        except NoSuchElementException as e:
-            print(e)
-            raise NoSuchElementException
+        self.driver.get(self.link)
+        sleep(random.uniform(2, 3))
+        self.driver.find_element_by_class_name(name="input__control").send_keys(request)
+        sleep(random.uniform(1, 2))
+        self.driver.find_element_by_class_name(
+            name="small-search-form-view__button"
+        ).click()
+        sleep(random.uniform(5, 6))
+        self.slider = self.driver.find_element_by_class_name(
+            name="scroll__scrollbar-thumb"
+        )
 
         if self.accept:
             flag = True
