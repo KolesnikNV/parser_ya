@@ -11,7 +11,9 @@ from selenium.webdriver import ActionChains
 from utils.constants import ACCEPT_BUTTON
 from faker import Faker
 from selenium.webdriver.chrome.options import Options
+import chromedriver_autoinstaller
 
+chromedriver_autoinstaller.install()
 fake = Faker()
 
 
