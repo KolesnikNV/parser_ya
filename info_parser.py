@@ -12,9 +12,15 @@ from selenium.webdriver.chrome.options import Options
 from soup_parser import SoupContentParser
 from webdriver_manager.chrome import ChromeDriverManager
 
-options = Options()
-options.add_argument("-headless")
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+chrome_options = Options()
+chrome_options.add_argument("--disable-gpu")
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-dev-shm-usage")
+chromedriver_path = "/usr/local/bin/chromedriver"
+chrome_binary_path = "/usr/bin/google"
+chrome_options.binary_location = chrome_binary_path
+driver = webdriver.Chrome(executable_path=chromedriver_path, options=chrome_options)
 
 
 class Parser:
