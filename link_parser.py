@@ -103,6 +103,7 @@ class LinksCollector:
             )
         except NoSuchElementException as e:
             print(e)
+            raise NoSuchElementException
 
         if self.accept:
             flag = True
